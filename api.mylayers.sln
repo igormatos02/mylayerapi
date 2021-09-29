@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.mylayers", "api.mylayers\api.mylayers.csproj", "{A8BEA003-0D4F-45B2-9E1C-0B5916FE9D00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "common.sismo", "common.sismo\common.sismo\common.sismo.csproj", "{723A133C-1C55-4356-B3A4-4DFDD964C740}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "common.sismo", "..\common.sismo\common.sismo\common.sismo.csproj", "{723A133C-1C55-4356-B3A4-4DFDD964C740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data.sismo", "data.sismo\data.sismo\data.sismo\data.sismo.csproj", "{2B5EBA60-951F-45B2-9977-BA12EC9B1C8E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "data.sismo", "..\data.sismo\data.sismo\data.sismo\data.sismo.csproj", "{2B5EBA60-951F-45B2-9977-BA12EC9B1C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "services.sismo", "services.sismo\services.sismo\services.sismo.csproj", "{B967CED4-D44C-458F-90CC-671BB14D43EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "services.sismo", "..\services.sismo\services.sismo\services.sismo.csproj", "{B967CED4-D44C-458F-90CC-671BB14D43EE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3DC20EB-126E-47E7-B052-1EE6BD1B28CE}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api.mylayers", "api.mylayers\api.mylayers\api.mylayers.csproj", "{9B5A7577-0080-4C18-8741-CA14C7CAA838}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A8BEA003-0D4F-45B2-9E1C-0B5916FE9D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8BEA003-0D4F-45B2-9E1C-0B5916FE9D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8BEA003-0D4F-45B2-9E1C-0B5916FE9D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8BEA003-0D4F-45B2-9E1C-0B5916FE9D00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{723A133C-1C55-4356-B3A4-4DFDD964C740}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{723A133C-1C55-4356-B3A4-4DFDD964C740}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723A133C-1C55-4356-B3A4-4DFDD964C740}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B967CED4-D44C-458F-90CC-671BB14D43EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B967CED4-D44C-458F-90CC-671BB14D43EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B967CED4-D44C-458F-90CC-671BB14D43EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5A7577-0080-4C18-8741-CA14C7CAA838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5A7577-0080-4C18-8741-CA14C7CAA838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5A7577-0080-4C18-8741-CA14C7CAA838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5A7577-0080-4C18-8741-CA14C7CAA838}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
