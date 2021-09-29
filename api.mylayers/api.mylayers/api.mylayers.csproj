@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common.sismo\common.sismo\common.sismo.csproj" />
+    <ProjectReference Include="..\..\data.sismo\data.sismo\data.sismo\data.sismo.csproj" />
+    <ProjectReference Include="..\..\services.sismo\services.sismo\services.sismo.csproj" />
+  </ItemGroup>
+
+
+</Project>
