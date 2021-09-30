@@ -1,3 +1,8 @@
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.csprojAssemblyReference.cache
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.AssemblyInfoInputs.cache
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.AssemblyInfo.cs
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.csproj.CoreCompileInputs.cache
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.MvcApplicationPartsAssemblyInfo.cache
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\ArcGISRuntime100.11\resources\network_analyst\strings.bin
@@ -148,6 +153,7 @@ C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Micro
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -164,6 +170,8 @@ C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Micro
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\NetTopologySuite.dll
+C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\NetTopologySuite.IO.SqlServerBytes.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -237,12 +245,7 @@ C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\servi
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\common.sismo.pdb
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\data.sismo.pdb
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\services.sismo.pdb
-C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.csprojAssemblyReference.cache
-C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.AssemblyInfoInputs.cache
-C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.AssemblyInfo.cs
-C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.csproj.CoreCompileInputs.cache
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.MvcApplicationPartsAssemblyInfo.cs
-C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\api.mylayers.MvcApplicationPartsAssemblyInfo.cache
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\staticwebassets\api.mylayers.StaticWebAssets.Manifest.cache
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\staticwebassets\api.mylayers.StaticWebAssets.xml
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\obj\Debug\netcoreapp3.1\scopedcss\bundle\api.mylayers.styles.css

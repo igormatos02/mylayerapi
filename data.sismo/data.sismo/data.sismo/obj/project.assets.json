@@ -380,6 +380,23 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite/5.0.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",
+          "NetTopologySuite": "2.1.0",
+          "NetTopologySuite.IO.SqlServerBytes": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll": {}
+        },
+        "build": {
+          "build/netstandard2.1/_._": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Tools/5.0.9": {
         "type": "package",
         "dependencies": {
@@ -640,6 +657,30 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "NetTopologySuite/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {}
+        }
+      },
+      "NetTopologySuite.IO.SqlServerBytes/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.IO.SqlServerBytes.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.IO.SqlServerBytes.dll": {}
         }
       },
       "Newtonsoft.Json/10.0.1": {
@@ -1064,6 +1105,15 @@
         },
         "runtime": {
           "lib/netstandard1.6/System.Linq.Expressions.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
         }
       },
       "System.Net.NameResolution/4.3.0": {
@@ -1736,6 +1786,10 @@
       "common.sismo/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": "5.0.9"
+        },
         "compile": {
           "bin/placeholder/common.sismo.dll": {}
         },
@@ -2508,6 +2562,21 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite/5.0.9": {
+      "sha512": "xfxkHbXlyTELr9vJWxOhC4JJ+isswGvGX2zQ/uIXCw7Xd91EjBNU3RqZUWRtfv0D931W1IXP2lJ7OjXCmxTLnQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlserver.nettopologysuite/5.0.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.targets",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.xml",
+        "microsoft.entityframeworkcore.sqlserver.nettopologysuite.5.0.9.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.nettopologysuite.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Tools/5.0.9": {
       "sha512": "BdNfn6IzyD6r6XpjnOn7HuWKryVzT6TnDIH8MZLD3d/wLG24V0BYB1Dyr6wnAqgGXXCZxJf77YES5nobge56aA==",
       "type": "package",
@@ -2973,6 +3042,33 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "NetTopologySuite/2.1.0": {
+      "sha512": "v/eGXaJbPMy9kg6OK30mSuF0Ln6TXmWzPS8ojUMr/ecRiNpiZlEDXKq0CWIaE2Tc1uV2RZHLVPfF1QcoGs4ZYg==",
+      "type": "package",
+      "path": "nettopologysuite/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "nettopologysuite.2.1.0.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    },
+    "NetTopologySuite.IO.SqlServerBytes/2.0.0": {
+      "sha512": "TuyMB0VSlRJx86UrWeQ+SGgOMudvhIL1qJJdWJw78nWsXIzKRP4ooQAhhhCCH7n8q1lvd0/NW3ByaLlHxxNSPQ==",
+      "type": "package",
+      "path": "nettopologysuite.io.sqlserverbytes/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NetTopologySuite.IO.SqlServerBytes.dll",
+        "lib/netstandard2.0/NetTopologySuite.IO.SqlServerBytes.xml",
+        "nettopologysuite.io.sqlserverbytes.2.0.0.nupkg.sha512",
+        "nettopologysuite.io.sqlserverbytes.nuspec"
       ]
     },
     "Newtonsoft.Json/10.0.1": {
@@ -4296,6 +4392,27 @@
         "runtimes/aot/lib/netcore50/System.Linq.Expressions.dll",
         "system.linq.expressions.4.3.0.nupkg.sha512",
         "system.linq.expressions.nuspec"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Net.NameResolution/4.3.0": {

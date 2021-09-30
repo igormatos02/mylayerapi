@@ -35,7 +35,7 @@ namespace api.mylayers
             services.AddSingleton<IOperationalFrontService, OperationalFrontService>();
 
             services.AddDbContextFactory<MyLayerContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("MyConnection"));
+                options.UseSqlServer(Configuration.GetConnectionString("MyConnection"), x => x.UseNetTopologySuite());
             });
         }
 
