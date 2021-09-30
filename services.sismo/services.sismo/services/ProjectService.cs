@@ -14,10 +14,10 @@ namespace services.sismo.services
             this.projectRepository = projectRepository;
         }
 
-        public Task<SeismicProjectModel> GetSeismicProject(int projectId)
+        public async Task<SeismicProjectModel> GetSeismicProject(int projectId)
         {
             try {
-                return this.projectRepository.GetSeismicProject(projectId);
+                return await this.projectRepository.GetSeismicProject(projectId);
             }
             catch(Exception ex) {
                 throw ex;
