@@ -9,16 +9,16 @@ namespace data.sismo.models
 {
     public partial class SeismicContext : DbContext
     {
-        private readonly string _conectionString = "data source=DESKTOP-MT0M6S4;initial catalog=Seismic;persist security info=True;user id=Lumen;password=123456;Connection Timeout=0;MultipleActiveResultSets=True;";
-        public SeismicContext()
+        private string _conectionString = "data source=DESKTOP-MT0M6S4;initial catalog=Seismic;persist security info=True;user id=Lumen;password=123456;Connection Timeout=0;MultipleActiveResultSets=True;";
+        public SeismicContext(string connectionString)
         {
-          
+            _conectionString = connectionString;
         }
         
-        public SeismicContext(DbContextOptions<SeismicContext> options, IConfiguration configuration)
+        public SeismicContext(DbContextOptions<SeismicContext> options)
             : base(options)
         {
-            _conectionString = configuration.GetConnectionString("MyConnection");
+           
         }
 
         public virtual DbSet<DisplacementRule> DisplacementRules { get; set; }

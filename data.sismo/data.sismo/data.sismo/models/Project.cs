@@ -28,9 +28,9 @@ namespace data.sismo.models
         public int? ExplosiveMax { get; set; }
         public int? FuseMax { get; set; }
         public string Crobservation { get; set; }
-        public int? ProjectBusinessType { get; set; }
-        public int? OwnerId { get; set; }
-        public int? OnlineProjectId { get; set; }
+        //public int? ProjectBusinessType { get; set; }
+        //public int? OwnerId { get; set; }
+        //public int? OnlineProjectId { get; set; }
 
         public virtual ICollection<OperationalFront> OperationalFronts { get; set; }
         public virtual ICollection<ProjectBase> ProjectBases { get; set; }

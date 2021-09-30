@@ -1,20 +1,14 @@
 using common.sismo.interfaces.repositories;
 using common.sismo.interfaces.services;
+using data.sismo.models;
 using data.sismo.repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using services.sismo.services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace api.mylayers
 {
@@ -34,7 +28,7 @@ namespace api.mylayers
             services.AddSwaggerGen();
             services.AddSingleton<IProjectRepository, ProjectRepository>();
             services.AddSingleton<IProjectService, ProjectService>();
-            services.AddDbContext<DbContext>(options => {
+            services.AddDbContext<SeismicContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("MyConnection"));
             });
         }

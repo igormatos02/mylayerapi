@@ -28,7 +28,7 @@ namespace data.sismo.mapping
 
             return new SeismicProjectModel()
             {
-                OwnerId = entity.OwnerId,
+               // OwnerId = entity.OwnerId,
                 ProjectId = entity.ProjectId,
                 Name = entity.Name,
                 ClientName = entity.ClientName,
@@ -41,7 +41,7 @@ namespace data.sismo.mapping
                 //CRObservation = entity.CRObservation,
                 ExplosiveMax = entity.ExplosiveMax,
                 FuseMax = entity.FuseMax,
-                OnlineProjectId = entity.OnlineProjectId
+               // OnlineProjectId = entity.OnlineProjectId
 
             };
         }
@@ -49,7 +49,7 @@ namespace data.sismo.mapping
         {
 
             entity.ProjectId = project.ProjectId;
-            entity.OwnerId = project.OwnerId;
+           // entity.OwnerId = project.OwnerId;
             entity.Name = project.Name;
             entity.ClientName = project.ClientName;
             entity.ProjectType = project.ProjectType.Substring(0, 1);
@@ -61,7 +61,7 @@ namespace data.sismo.mapping
             entity.FuseMax = project.FuseMax;
             entity.DateIni = string.IsNullOrEmpty(project.DateIni) ? new DateTime?() : DateHelper.StringToDate(project.DateIni);
             entity.DateEnd = string.IsNullOrEmpty(project.DateEnd) ? new DateTime?() : DateHelper.StringToDate(project.DateEnd);
-            entity.OnlineProjectId = project.OnlineProjectId;
+           // entity.OnlineProjectId = project.OnlineProjectId;
 
         }
         public static Project ToEntity(this SeismicProjectModel project)
