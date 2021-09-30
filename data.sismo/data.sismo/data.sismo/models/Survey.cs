@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetTopologySuite.Geometries;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -68,6 +69,7 @@ namespace data.sismo.models
         public virtual ICollection<ProjectExplosiveMaterial> ProjectExplosiveMaterials { get; set; }
         public virtual ICollection<ReductionRule> ReductionRules { get; set; }
         public virtual ICollection<Stretch> Stretches { get; set; }
+        public virtual Geometry Polygon { get; set; }
         public virtual ICollection<SurveyCoordinateSystem> SurveyCoordinateSystems { get; set; }
         public virtual ICollection<SurveyOperationalFront> SurveyOperationalFronts { get; set; }
         public virtual ICollection<SurveyParameter> SurveyParameters { get; set; }

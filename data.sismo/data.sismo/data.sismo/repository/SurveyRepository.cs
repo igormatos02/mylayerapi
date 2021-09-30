@@ -24,7 +24,8 @@ namespace data.sismo.repository
                              select x);
 
                 var entity = await query.FirstOrDefaultAsync();
-                return entity.ToModel();
+                var model =  entity.ToSimplifiedModel();
+                return model;
             }
         }
     }

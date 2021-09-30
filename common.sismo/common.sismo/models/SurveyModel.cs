@@ -8,6 +8,8 @@ namespace common.sismo.models
         public SurveyModel()
         {
             Project = new SeismicProjectModel();
+            Parameters = new List<ParameterModel>();
+            OperationalFrontsIds = new List<int>();
         }
         public int SurveyId { get; set; }
         public int ProjectId { get; set; }

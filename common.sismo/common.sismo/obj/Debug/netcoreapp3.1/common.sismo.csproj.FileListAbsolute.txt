@@ -16,3 +16,4 @@ C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\commo
 C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
 C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.dll
 C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.pdb
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.csprojAssemblyReference.cache
