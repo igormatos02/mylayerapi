@@ -1,24 +1,18 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
 namespace data.sismo.models
 {
-    public partial class SeismicContext : DbContext
+    public partial class MyLayerContext : DbContext
     {
-        private string _conectionString = "data source=DESKTOP-MT0M6S4;initial catalog=Seismic;persist security info=True;user id=Lumen;password=123456;Connection Timeout=0;MultipleActiveResultSets=True;";
-        public SeismicContext(string connectionString)
-        {
-            _conectionString = connectionString;
-        }
-        
-        public SeismicContext(DbContextOptions<SeismicContext> options)
+        private string _connectionString = "data source=DESKTOP-MT0M6S4;initial catalog=Seismic;persist security info=True;user id=Lumen;password=123456;Connection Timeout=0;MultipleActiveResultSets=True;";
+      
+
+        public MyLayerContext(DbContextOptions<MyLayerContext> options)
             : base(options)
         {
-           
+            
         }
 
         public virtual DbSet<DisplacementRule> DisplacementRules { get; set; }
@@ -63,8 +57,8 @@ namespace data.sismo.models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer(_conectionString);
+                #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer(_connectionString);
             }
         }
 

@@ -1,5 +1,6 @@
 using common.sismo.interfaces.repositories;
 using common.sismo.interfaces.services;
+using data.sismo;
 using data.sismo.models;
 using data.sismo.repository;
 using Microsoft.AspNetCore.Builder;
@@ -28,7 +29,12 @@ namespace api.mylayers
             services.AddSwaggerGen();
             services.AddSingleton<IProjectRepository, ProjectRepository>();
             services.AddSingleton<IProjectService, ProjectService>();
-            services.AddDbContext<SeismicContext>(options => {
+            services.AddSingleton<ISurveyRepository, SurveyRepository>();
+            services.AddSingleton<ISurveyService, SurveyService>();
+            services.AddSingleton<IOperationalFrontRepository, OperationalFrontRepository>();
+            services.AddSingleton<IOperationalFrontService, OperationalFrontService>();
+
+            services.AddDbContextFactory<MyLayerContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("MyConnection"));
             });
         }
