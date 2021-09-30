@@ -1,6 +1,7 @@
 ﻿using common.sismo.interfaces.repositories;
 using common.sismo.interfaces.services;
 using common.sismo.models;
+using System;
 using System.Threading.Tasks;
 
 namespace services.sismo.services
@@ -15,7 +16,12 @@ namespace services.sismo.services
 
         public Task<SeismicProjectModel> GetSeismicProject(int projectId)
         {
-            return this.projectRepository.GetSeismicProject(projectId);
+            try {
+                return this.projectRepository.GetSeismicProject(projectId);
+            }
+            catch(Exception ex) {
+                throw ex;
+            }
         }
     }
 }
