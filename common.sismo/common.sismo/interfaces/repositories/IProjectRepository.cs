@@ -9,5 +9,8 @@ namespace common.sismo.interfaces.repositories
     public interface IProjectRepository
     {
         Task<SeismicProjectModel> GetSeismicProject(Int32 projectId);
+        Task<List<SeismicProjectModel>> ListProjects(bool? isActive = true);
+        Task AddProject(SeismicProjectModel project);
+        Task UpdateProject(SeismicProjectModel modifiedProject);
     }
 }
