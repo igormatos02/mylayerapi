@@ -108,5 +108,47 @@ namespace common.sismo.helpers
         {
             return date.ToString("MM-dd-yyyy");
         }
+        public static dynamic GetDBValue(dynamic var, String type)
+        {
+            if (var == null || ((type == "InvertedDate" || type == "NormalDate" || type == "InvertedDateTime" || type == "NormalDateTime") && var == ""))
+            {
+                // if (type == "InvertedDate" || type == "NormalDate" || type == "InvertedDateTime" || type == "NormalDateTime")
+                //   return DateTime.Now.Date;
+                //else
+                return DBNull.Value;
+            }
+
+            else
+            {
+                if (type == "InvertedDate")
+                    return DateHelper.IntertedStringToDate(var);
+                else if (type == "NormalDate")
+                    return DateHelper.StringToDate(var);
+                if (type == "InvertedDateTime")
+                    return DateHelper.IntertedStringToDateTime(var);
+                else if (type == "NormalDateTime")
+                    return DateHelper.StringToDateTime(var);
+                else return var;
+            }
+        }
+        public static string GetShortMonthName(Int32 month)
+        {
+            String value = "";
+
+            if (month == 1) value = "Jan";
+            if (month == 2) value = "Fev";
+            if (month == 3) value = "Mar";
+            if (month == 4) value = "Abr";
+            if (month == 5) value = "Mai";
+            if (month == 6) value = "Jun";
+            if (month == 7) value = "Jul";
+            if (month == 8) value = "Ago";
+            if (month == 9) value = "Set";
+            if (month == 10) value = "Out";
+            if (month == 11) value = "Nov";
+            if (month == 12) value = "Dez";
+
+            return value;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetTopologySuite.Geometries;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -17,7 +18,7 @@ namespace data.sismo.models
         public int? PreplotPointId { get; set; }
         public string LinePreplot { get; set; }
         public decimal? StationNumberPreplot { get; set; }
-
+        public Geometry Coordinate { get; set; }
         public virtual Survey Survey { get; set; }
     }
 }

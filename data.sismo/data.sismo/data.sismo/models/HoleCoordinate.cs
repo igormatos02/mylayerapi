@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetTopologySuite.Geometries;
+using System;
 using System.Collections.Generic;
 
 #nullable disable
@@ -16,7 +17,7 @@ namespace data.sismo.models
         public int FileId { get; set; }
         public decimal? StationNumber { get; set; }
         public int HoleCoordinateId { get; set; }
-
+        public Geometry Coordinate { get; set; }
         public virtual HolesCoordinatesFile File { get; set; }
         public virtual Survey Survey { get; set; }
     }

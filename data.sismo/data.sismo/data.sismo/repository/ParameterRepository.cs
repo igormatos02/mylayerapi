@@ -35,5 +35,5 @@ namespace data.sismo.repository
             return entities;
         }
     }
-    }
+    
 }
