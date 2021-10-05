@@ -19,7 +19,7 @@ namespace data.sismo.mapping
 
         }
 
-        public static void Copy(this ReductionRule model, ReductionRule entity)
+        public static void Copy(this ReductionRuleModel model, ReductionRule entity)
         {
 
 
@@ -29,7 +29,7 @@ namespace data.sismo.mapping
             //entity.SurveyId = model.SurveyId;
 
         }
-        public static ReductionRule ToEntity(this ReductionRule model)
+        public static ReductionRule ToEntity(this ReductionRuleModel model)
         {
             ReductionRule entity = new ReductionRule();
             model.Copy(entity);
