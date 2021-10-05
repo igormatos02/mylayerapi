@@ -18,27 +18,31 @@ namespace api.mylayers.Controllers
         }
 
         [HttpGet]
+        [Route("Get")]
         public async Task<SeismicProjectModel> Get(int id)
         {
             return await _projectService.GetSeismicProject(id);
         }
 
         [HttpGet]
+        [Route("List")]
         public async Task<List<SeismicProjectModel>> List(bool? isActive)
         {
             return await _projectService.ListProjects(isActive);
         }
 
         [HttpPost]
+        [Route("Save")]
         public async Task<SeismicProjectModel> Save(SeismicProjectModel model)
         {
             return await _projectService.SaveProject(model);
         }
 
         [HttpPut]
+        [Route("ActivateDeactivate")]
         public async Task ActivateDeactivate(int projectId)
         {
-             await _projectService.ActivateDeactivateProject(projectId);
+            await _projectService.ActivateDeactivateProject(projectId);
         }
     }
 }
