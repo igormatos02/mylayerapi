@@ -42,12 +42,15 @@ namespace data.sismo.repository
             return entities;
         }
 
-        public async Task AddProject(SeismicProjectModel project)
+        public async Task<SeismicProjectModel> AddProject(SeismicProjectModel project)
         {
             using var context = _contextFactory.CreateDbContext();
             project.LastUpdate = DateTime.Now;
-            context.Add(project.ToEntity());
+            var entity = project.ToEntity();
+            context.Add(entity);
             await context.SaveChangesAsync();
+            project.ProjectId = entity.ProjectId;
+            return project;
         }
 
         public async Task UpdateProject(SeismicProjectModel modifiedProject)

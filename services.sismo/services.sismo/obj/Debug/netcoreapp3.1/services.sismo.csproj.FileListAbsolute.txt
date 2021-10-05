@@ -10,15 +10,3 @@ C:\Repos\SISMO\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.si
 C:\Repos\SISMO\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.csproj.CopyComplete
 C:\Repos\SISMO\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.dll
 C:\Repos\SISMO\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.pdb
-C:\Repos\github\mylayers\services.sismo\services.sismo\bin\Debug\netcoreapp3.1\services.sismo.deps.json
-C:\Repos\github\mylayers\services.sismo\services.sismo\bin\Debug\netcoreapp3.1\services.sismo.dll
-C:\Repos\github\mylayers\services.sismo\services.sismo\bin\Debug\netcoreapp3.1\services.sismo.pdb
-C:\Repos\github\mylayers\services.sismo\services.sismo\bin\Debug\netcoreapp3.1\common.sismo.dll
-C:\Repos\github\mylayers\services.sismo\services.sismo\bin\Debug\netcoreapp3.1\common.sismo.pdb
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.csprojAssemblyReference.cache
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.AssemblyInfoInputs.cache
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.AssemblyInfo.cs
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.csproj.CoreCompileInputs.cache
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.csproj.CopyComplete
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.dll
-C:\Repos\github\mylayers\services.sismo\services.sismo\obj\Debug\netcoreapp3.1\services.sismo.pdb
