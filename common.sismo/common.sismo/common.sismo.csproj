@@ -1,6 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-  
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>common.sismo</PackageId>
     <Version>1.0.0</Version>
@@ -8,12 +7,24 @@
     <Company>GitHub</Company>
     <PackageDescription>This package contains all the interfaces to mylayers</PackageDescription>
     <RepositoryUrl>https://github.com/igormatos02/mylayerapi</RepositoryUrl>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <PropertyGroup>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="nuget.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="nuget.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite" Version="5.0.9" />

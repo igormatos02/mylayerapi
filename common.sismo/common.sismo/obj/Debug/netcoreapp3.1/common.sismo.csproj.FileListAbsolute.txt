@@ -7,3 +7,14 @@ C:\Repos\SISMO\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.As
 C:\Repos\SISMO\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.csproj.CoreCompileInputs.cache
 C:\Repos\SISMO\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.dll
 C:\Repos\SISMO\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.pdb
+C:\Repos\github\mylayers\common.sismo\common.sismo\bin\Debug\netcoreapp3.1\nuget.config
+C:\Repos\github\mylayers\common.sismo\common.sismo\bin\Debug\netcoreapp3.1\common.sismo.deps.json
+C:\Repos\github\mylayers\common.sismo\common.sismo\bin\Debug\netcoreapp3.1\common.sismo.dll
+C:\Repos\github\mylayers\common.sismo\common.sismo\bin\Debug\netcoreapp3.1\common.sismo.pdb
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.csprojAssemblyReference.cache
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.AssemblyInfoInputs.cache
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.AssemblyInfo.cs
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.csproj.CoreCompileInputs.cache
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\EFCoreSqlServerNetTopologySuite.cs
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.dll
+C:\Repos\github\mylayers\common.sismo\common.sismo\obj\Debug\netcoreapp3.1\common.sismo.pdb
