@@ -26,7 +26,7 @@ jobs:
           include-prerelease: true
       
       - name: Restore Packages
-        run: dotnet restore ${{env.PROJECT_PATH}} -s https://api.nuget.org/v3/ --verbosity n
+        run: dotnet restore D:\a\mylayerapi\mylayerapi\api.mylayers\api.mylayers\
 
       - name: Build with dotnet
         run: dotnet build ${{env.PROJECT_PATH}} --configuration --no-restore Release
