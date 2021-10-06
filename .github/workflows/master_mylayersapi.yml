@@ -26,10 +26,10 @@ jobs:
           include-prerelease: true
       
       - name: Restore Packages
-        run: dotnet restore ${{ PROJECT_PATH }}
+        run: dotnet restore ${{PROJECT_PATH}}
 
       - name: Build with dotnet
-        run: dotnet build ${{ PROJECT_PATH }} --configuration --no-restore Release
+        run: dotnet build ${{PROJECT_PATH}} --configuration --no-restore Release
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
