@@ -1,17 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-  <TargetFramework>netcoreapp3.1</TargetFramework>
-  <PackageId>clientlib.mylayers</PackageId>
-  <Version>1.0.0</Version>
-  <Authors>Igor Matos</Authors>
-  <Company>GitHub</Company>
-  <PackageDescription>This package contains all the interfaces to mylayers</PackageDescription>
-  <RepositoryUrl>https://github.com/igormatos02/mylayerapi</RepositoryUrl>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-  </PropertyGroup>
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <IsPackable>true</IsPackable>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

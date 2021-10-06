@@ -29,13 +29,13 @@ namespace api.mylayers
             services.AddSwaggerGen();
             services.AddSingleton<IProjectRepository, ProjectRepository>();
             services.AddSingleton<IProjectService, ProjectService>();
-            services.AddSingleton<ISurveyRepository, SurveyRepository>();
+            services.AddSingleton<ISurveyRepository, SurveyRepository>(); 
             services.AddSingleton<ISurveyService, SurveyService>();
             services.AddSingleton<IOperationalFrontRepository, OperationalFrontRepository>();
             services.AddSingleton<IOperationalFrontService, OperationalFrontService>();
 
             services.AddDbContextFactory<MyLayerContext>(options => {
-                options.UseSqlServer(Configuration.GetConnectionString("MyConnection"), x => x.UseNetTopologySuite());
+                options.UseSqlServer(Configuration.GetConnectionString("MyConnection"), x => x.UseNetTopologySuite()); 
             });
 
             services.AddCors(o => o.AddPolicy(MyAllowedPolicy, buider =>

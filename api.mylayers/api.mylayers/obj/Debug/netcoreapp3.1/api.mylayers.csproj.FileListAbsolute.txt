@@ -1,4 +1,3 @@
-C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\nuget.config
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Repos\github\mylayers\api.mylayers\api.mylayers\bin\Debug\netcoreapp3.1\ArcGISRuntime100.11\resources\network_analyst\strings.bin
