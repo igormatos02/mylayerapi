@@ -26,7 +26,7 @@ jobs:
           include-prerelease: true
       
       - name: Restore Packages
-        run: dotnet restore ${{env.PROJECT_PATH}}
+        run: dotnet restore ${{env.PROJECT_PATH}} -s https://api.nuget.org/ --verbosity n
 
       - name: Build with dotnet
         run: dotnet build ${{env.PROJECT_PATH}} --configuration --no-restore Release
