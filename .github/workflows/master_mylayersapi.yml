@@ -30,7 +30,7 @@ jobs:
       - name: Pack
         run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages"
       - name: Push generated package to GitHub registry
-        run: nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.0.nupkg -Source --api-key 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 --source "github"
+        run: nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.0.nupkg  --api-key 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 --source --Source "github"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
