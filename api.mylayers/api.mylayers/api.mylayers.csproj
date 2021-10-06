@@ -12,7 +12,7 @@
     <ProjectReference Include="..\..\common.sismo\common.sismo\common.sismo.csproj" />
     <ProjectReference Include="..\..\data.sismo\data.sismo\data.sismo\data.sismo.csproj" />
     <ProjectReference Include="..\..\services.sismo\services.sismo\services.sismo.csproj" />
-  </ItemGroup>
+  </ItemGroup> 
 
 
 </Project>
