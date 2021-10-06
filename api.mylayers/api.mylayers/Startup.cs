@@ -29,7 +29,7 @@ namespace api.mylayers
             services.AddSwaggerGen();
             services.AddSingleton<IProjectRepository, ProjectRepository>();
             services.AddSingleton<IProjectService, ProjectService>();
-            services.AddSingleton<ISurveyRepository, SurveyRepository>();
+            services.AddSingleton<ISurveyRepository, SurveyRepository>(); 
             services.AddSingleton<ISurveyService, SurveyService>();
             services.AddSingleton<IOperationalFrontRepository, OperationalFrontRepository>();
             services.AddSingleton<IOperationalFrontService, OperationalFrontService>();
