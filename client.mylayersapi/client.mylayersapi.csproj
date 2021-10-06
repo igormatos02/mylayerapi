@@ -1,6 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageId>client.mylayersapi</PackageId>
@@ -9,11 +7,6 @@
     <Company>GitHub</Company>
     <PackageDescription>This package contains all the interfaces to mylayers</PackageDescription>
     <RepositoryUrl>https://github.com/igormatos02/mylayerapi</RepositoryUrl>
-    <RestoreAdditionalProjectSources>
-      https://api.nuget.org/v3/index.json;
-      https://www.myget.org/F/sixlabors/api/v3/index.json;
-      $(MSBuildThisFileDirectory)/../References/
-    </RestoreAdditionalProjectSources>
   </PropertyGroup>
   
   <PropertyGroup>
