@@ -5,25 +5,313 @@
   },
   "projects": {
     "C:\\Repos\\github\\mylayers\\api.mylayers\\api.mylayers\\api.mylayers.csproj": {
+      "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Repos\\github\\mylayers\\api.mylayers\\api.mylayers\\api.mylayers.csproj",
+        "projectName": "api.mylayers",
         "projectPath": "C:\\Repos\\github\\mylayers\\api.mylayers\\api.mylayers\\api.mylayers.csproj",
         "packagesPath": "C:\\Users\\Igor Matos\\.nuget\\packages\\",
         "outputPath": "C:\\Repos\\github\\mylayers\\api.mylayers\\api.mylayers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\Igor Matos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Repos\\github\\mylayers\\client.mylayersapi\\bin\\Debug\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/igormatos02/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj": {
+                "projectPath": "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj"
+              },
+              "C:\\Repos\\github\\mylayers\\data.sismo\\data.sismo\\data.sismo\\data.sismo.csproj": {
+                "projectPath": "C:\\Repos\\github\\mylayers\\data.sismo\\data.sismo\\data.sismo\\data.sismo.csproj"
+              },
+              "C:\\Repos\\github\\mylayers\\services.sismo\\services.sismo\\services.sismo.csproj": {
+                "projectPath": "C:\\Repos\\github\\mylayers\\services.sismo\\services.sismo\\services.sismo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj",
+        "projectName": "common.sismo",
+        "projectPath": "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj",
+        "packagesPath": "C:\\Users\\Igor Matos\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Igor Matos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Repos\\github\\mylayers\\client.mylayersapi\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/igormatos02/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\github\\mylayers\\data.sismo\\data.sismo\\data.sismo\\data.sismo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\github\\mylayers\\data.sismo\\data.sismo\\data.sismo\\data.sismo.csproj",
+        "projectName": "data.sismo",
+        "projectPath": "C:\\Repos\\github\\mylayers\\data.sismo\\data.sismo\\data.sismo\\data.sismo.csproj",
+        "packagesPath": "C:\\Users\\Igor Matos\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\github\\mylayers\\data.sismo\\data.sismo\\data.sismo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Igor Matos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Repos\\github\\mylayers\\client.mylayersapi\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/igormatos02/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj": {
+                "projectPath": "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Esri.ArcGISRuntime": {
+              "target": "Package",
+              "version": "[100.11.2, )"
+            },
+            "Esri.ArcGISRuntime.Toolkit": {
+              "target": "Package",
+              "version": "[100.11.0, )"
+            },
+            "Esri.ArcGISRuntime.WPF": {
+              "target": "Package",
+              "version": "[100.11.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Repos\\github\\mylayers\\services.sismo\\services.sismo\\services.sismo.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Repos\\github\\mylayers\\services.sismo\\services.sismo\\services.sismo.csproj",
+        "projectName": "services.sismo",
+        "projectPath": "C:\\Repos\\github\\mylayers\\services.sismo\\services.sismo\\services.sismo.csproj",
+        "packagesPath": "C:\\Users\\Igor Matos\\.nuget\\packages\\",
+        "outputPath": "C:\\Repos\\github\\mylayers\\services.sismo\\services.sismo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Igor Matos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Repos\\github\\mylayers\\client.mylayersapi\\bin\\Debug\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/igormatos02/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj": {
+                "projectPath": "C:\\Repos\\github\\mylayers\\common.sismo\\common.sismo\\common.sismo.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
         }
       }
     }
