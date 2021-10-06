@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A3DC20EB-126E-47E7-B052-1EE6BD1B28CE}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.github\workflows\master_mylayersapi.yml = .github\workflows\master_mylayersapi.yml
 		README.txt = README.txt
 	EndProjectSection
 EndProject
@@ -29,7 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Client", "0 Client", "{D3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "clientlib.mylayers", "clientlib.mylayers\clientlib.mylayers.csproj", "{E24965CA-1DD0-48DC-A2D1-106F15B4FB77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client.mylayersapi", "client.mylayersapi\client.mylayersapi.csproj", "{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "client.mylayersapi", "client.mylayersapi\client.mylayersapi.csproj", "{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

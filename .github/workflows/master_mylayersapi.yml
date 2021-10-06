@@ -9,6 +9,9 @@ on:
       - master
   workflow_dispatch:
 
+env:
+  API_PROJECT_PATH: api.mylayers/api.mylayers.csproj
+
 jobs:
   build:
     runs-on: windows-latest
@@ -21,9 +24,12 @@ jobs:
         with:
           dotnet-version: '3.1'
           include-prerelease: true
+      
+      - name: Restore Packages
+        run: dotnet restore ${{ API_PROJECT_PATH }}
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build ${{ API_PROJECT_PATH }} --configuration --no-restore Release
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
