@@ -27,7 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Data", "3 Data", "{304938
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 Client", "0 Client", "{D36F2BFF-5081-411C-B139-F21D6F9578D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clientlib.mylayers", "clientlib.mylayers\clientlib.mylayers.csproj", "{E24965CA-1DD0-48DC-A2D1-106F15B4FB77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "clientlib.mylayers", "clientlib.mylayers\clientlib.mylayers.csproj", "{E24965CA-1DD0-48DC-A2D1-106F15B4FB77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client.mylayersapi", "client.mylayersapi\client.mylayersapi.csproj", "{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{E24965CA-1DD0-48DC-A2D1-106F15B4FB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E24965CA-1DD0-48DC-A2D1-106F15B4FB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E24965CA-1DD0-48DC-A2D1-106F15B4FB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{B967CED4-D44C-458F-90CC-671BB14D43EE} = {1B6B57F7-209A-4C09-994B-C718FAB36B16}
 		{9B5A7577-0080-4C18-8741-CA14C7CAA838} = {7887FC2B-3F01-4F8F-A67C-05A2D21526D6}
 		{E24965CA-1DD0-48DC-A2D1-106F15B4FB77} = {D36F2BFF-5081-411C-B139-F21D6F9578D9}
+		{4A5E4E8E-5EC6-468F-89A3-3E60E69FBA72} = {D36F2BFF-5081-411C-B139-F21D6F9578D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D041D861-9E6F-4D12-9497-B3300B77276F}

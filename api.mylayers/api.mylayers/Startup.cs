@@ -21,7 +21,7 @@ namespace api.mylayers
         }
 
         public IConfiguration Configuration { get; }
-
+        public string MyAllowedPolicy = "_myAllowedSpecificOrigin";
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -37,6 +37,10 @@ namespace api.mylayers
             services.AddDbContextFactory<MyLayerContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("MyConnection"), x => x.UseNetTopologySuite());
             });
+
+            services.AddCors(o => o.AddPolicy(MyAllowedPolicy, buider =>
+               { buider.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); }
+            ));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +62,7 @@ namespace api.mylayers
             });
 
             app.UseHttpsRedirection();
-
+            app.UseCors(MyAllowedPolicy);
             app.UseRouting();
 
             app.UseAuthorization();
