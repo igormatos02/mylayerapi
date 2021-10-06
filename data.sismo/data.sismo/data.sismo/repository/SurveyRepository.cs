@@ -92,18 +92,6 @@ namespace data.sismo.repository
             var entities = await query.Select(x => x.ToSimplifiedModel()).ToListAsync();
             return entities;
         }
-       
-        public async Task<List<OperationalFrontModel>> ListSurveyOperationalFronts(int surveyId)
-        {  
-            using var context = _contextFactory.CreateDbContext();
-
-            var query = await (from x in context.Surveys
-                         where x.SurveyId == surveyId
-                         select x).FirstOrDefaultAsync();
-
-            var entities = query.SurveyOperationalFronts.Select(x => x.OperationalFront.ToModel());
-            return entities.OrderBy(m => m.OperationalFrontType).ThenBy(m => m.OperationalFrontId).ToList();
-        }
 
         public async Task<List<ProjectBaseModel>> ListSurveyProjectBases(int surveyId)
         {   
@@ -130,20 +118,6 @@ namespace data.sismo.repository
 
         }
 
-
-        public async Task<List<OperationalFrontModel>> ListSurveyOperationalFronts(int surveyId, int frontType)
-        {
-            using var context = _contextFactory.CreateDbContext();
-
-            var query = await(from x in context.Surveys
-                              where x.SurveyId == surveyId
-                              select x).FirstOrDefaultAsync();
-
-            var entities = query.SurveyOperationalFronts.Select(x => x.OperationalFront.ToModel());
-            return entities.Where(x=>x.OperationalFrontType==(OperationalFrontType)frontType).OrderBy(m => m.OperationalFrontType).ThenBy(m => m.OperationalFrontId).ToList();
-           
-        }
-
         public async Task<List<SurveyModel>> ListProjectSurveys(Int32 projectId)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -154,8 +128,6 @@ namespace data.sismo.repository
             var entities = await query.Select(x => x.ToSimplifiedModel()).ToListAsync();
             return entities;
         }
-
-
        
         public async Task<int> AddSurvey(SurveyModel survey)
         {

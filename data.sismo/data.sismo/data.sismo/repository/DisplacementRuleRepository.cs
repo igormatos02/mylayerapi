@@ -29,7 +29,7 @@ namespace data.sismo.repository
             return entity.ToModel();
         }
 
-        public async Task<List<DisplacementRuleModel>> ListProjects(int surveyId, bool onlyActives, int type)
+        public async Task<List<DisplacementRuleModel>> ListDisplacementRules(int surveyId, bool onlyActives, int type)
         {   
             using var context = _contextFactory.CreateDbContext();
             var query = (from x in context.DisplacementRules
@@ -41,7 +41,7 @@ namespace data.sismo.repository
             var entities = await query.Select(x => x.ToModel()).ToListAsync();
             return entities;
         }
-        public async Task<List<DisplacementRuleModel>> ListProjects()
+        public async Task<List<DisplacementRuleModel>> ListDisplcementRules()
         {
            using var context = _contextFactory.CreateDbContext();
             var query = (from x in context.DisplacementRules

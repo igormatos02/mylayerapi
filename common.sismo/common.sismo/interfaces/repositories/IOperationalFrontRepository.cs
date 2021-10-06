@@ -20,5 +20,8 @@ namespace common.sismo.interfaces.repositories
         Task<OperationalFrontModel> AddOperationalFront(OperationalFrontModel model);
         Task UpdateOperationalFront(OperationalFrontModel model);
         Task DeleteOperationalFront(int operationalFrontId);
+        Task<List<OperationalFrontModel>> ListSurveyOperationalFronts(int surveyId);
+        Task<List<OperationalFrontModel>> ListSurveyOperationalFronts(int surveyId, int frontType);
+
     }
 }

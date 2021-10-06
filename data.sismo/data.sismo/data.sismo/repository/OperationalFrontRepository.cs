@@ -111,17 +111,6 @@ namespace data.sismo.repository
             return entities;
         }
 
-        public async Task<List<OperationalFrontModel>> ListProjectOperationalFronts(int projectId)
-        {
-            using var context = _contextFactory.CreateDbContext();
-            var query = (from x in context.OperationalFronts
-                         where x.ProjectId == projectId
-                         select x);
-
-            var entities = await query.Select(x => x.ToModel()).OrderBy(m => m.OperationalFrontType).ThenBy(m => m.OperationalFrontId).ToListAsync();
-            return entities;
-        }
-
         public async Task<OperationalFrontModel> AddOperationalFront(OperationalFrontModel model)
         {
             using var context = _contextFactory.CreateDbContext();
@@ -154,6 +143,42 @@ namespace data.sismo.repository
             context.OperationalFronts.Remove(entity);
             await context.SaveChangesAsync();
             return;
+        }
+
+        public async Task<List<OperationalFrontModel>> ListSurveyOperationalFronts(int surveyId)
+        {
+            using var context = _contextFactory.CreateDbContext();
+
+            var query = await (from x in context.Surveys
+                               where x.SurveyId == surveyId
+                               select x).FirstOrDefaultAsync();
+
+            var entities = query.SurveyOperationalFronts.Select(x => x.OperationalFront.ToModel());
+            return entities.OrderBy(m => m.OperationalFrontType).ThenBy(m => m.OperationalFrontId).ToList();
+        }
+
+        public async Task<List<OperationalFrontModel>> ListSurveyOperationalFronts(int surveyId, int frontType)
+        {
+            using var context = _contextFactory.CreateDbContext();
+
+            var query = await (from x in context.Surveys
+                               where x.SurveyId == surveyId
+                               select x).FirstOrDefaultAsync();
+
+            var entities = query.SurveyOperationalFronts.Select(x => x.OperationalFront.ToModel());
+            return entities.Where(x => x.OperationalFrontType == (OperationalFrontType)frontType).OrderBy(m => m.OperationalFrontType).ThenBy(m => m.OperationalFrontId).ToList();
+
+        }
+
+        public async Task<List<OperationalFrontModel>> ListProjectOperationalFronts(int projectId)
+        {
+            using var context = _contextFactory.CreateDbContext();
+
+            var query = await (from x in context.OperationalFronts
+                               where x.ProjectId == projectId
+                               select x).OrderBy(m => m.OperationalFrontType).ThenBy(m => m.OperationalFrontId).ToListAsync();
+
+            return query.Select(x => x.ToModel()).ToList();
         }
     }
 }
