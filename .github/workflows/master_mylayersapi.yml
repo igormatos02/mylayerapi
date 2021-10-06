@@ -26,7 +26,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Add private GitHub registry to NuGet
-        run: nuget sources add -name "github" -Source https://nuget.pkg.github.com/igormatos02/index.json -Username igormatos02 -Password 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
+        run: nuget sources add -name "github" -Source https://nuget.pkg.github.com/igormatos02/index.json --api-key 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
       - name: Pack
         run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages"
       - name: Push generated package to GitHub registry
