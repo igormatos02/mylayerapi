@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  API_PROJECT_PATH: api.mylayers/api.mylayers.csproj
+  API_PROJECT_PATH: 'api.mylayers/api.mylayers.csproj'
 
 jobs:
   build:
