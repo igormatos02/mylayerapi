@@ -22,6 +22,8 @@ jobs:
           dotnet-version: '3.1'
           include-prerelease: true
  
+      - name: Add Access
+        run: dotnet nuget add source --username igormatos02 --password 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 --store-password-in-clear-text --name github "https://nuget.pkg.github.com/igormatos02/index.json"
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
