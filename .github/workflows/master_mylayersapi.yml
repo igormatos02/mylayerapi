@@ -25,6 +25,7 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
+
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
