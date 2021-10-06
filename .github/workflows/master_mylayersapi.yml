@@ -25,11 +25,14 @@ jobs:
           dotnet-version: '3.1'
           include-prerelease: true
       
+      - name: Add Access
+        run: dotnet nuget add source --username igormatos02 --password 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 --store-password-in-clear-text --name github "https://nuget.pkg.github.com/igormatos02/index.json"
+
       - name: Restore Packages
-        run: dotnet restore D:\a\mylayerapi\mylayerapi\api.mylayers\api.mylayers\
+        run: dotnet restore 
 
       - name: Build with dotnet
-        run: dotnet build ${{env.PROJECT_PATH}} --configuration --no-restore Release
+        run: dotnet build  --configuration --no-restore Release
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
