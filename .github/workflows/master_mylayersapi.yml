@@ -25,13 +25,7 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
-        name: Pack
-        run: dotnet pack --configuration Release --version-suffix action-testing -o "./packages"
-        - name: Publish Pack
-        env:
-            NUGET_AUTH_TOKEN: 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
-            run: dotnet nuget push "bin/Release/OctocatApp.1.0.0.nupkg" --source "github"  ./packages/*.nupkg
-      
+       
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp

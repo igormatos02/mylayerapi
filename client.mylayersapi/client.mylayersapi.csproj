@@ -9,7 +9,7 @@
     <Company>GitHub</Company>
     <PackageDescription>This package contains all the interfaces to mylayers</PackageDescription>
     <RepositoryUrl>https://github.com/igormatos02/mylayerapi</RepositoryUrl>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
   
   <PropertyGroup>
