@@ -9,7 +9,11 @@
     <Company>GitHub</Company>
     <PackageDescription>This package contains all the interfaces to mylayers</PackageDescription>
     <RepositoryUrl>https://github.com/igormatos02/mylayerapi</RepositoryUrl>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://www.myget.org/F/sixlabors/api/v3/index.json;
+      $(MSBuildThisFileDirectory)/../References/
+    </RestoreAdditionalProjectSources>
   </PropertyGroup>
   
   <PropertyGroup>
