@@ -21,14 +21,7 @@ jobs:
         with:
           dotnet-version: '3.1'
           include-prerelease: true
-
-      - task: NuGetCommand@2
-      displayName: 'NuGet restore'
-      inputs:
-        restoreSolution: '**/*.sln'
-        vstsFeed: 'feed guid'
-        includeNuGetOrg: true
-    
+ 
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
