@@ -27,6 +27,8 @@ jobs:
 
       - name: Pack
         run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages"
+      - name: Publish Pack
+        run: dotnet nuget push "\mylayerapi\packages\common.sismo.1.0.0-action-testing.nupkg" --source "github"
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
