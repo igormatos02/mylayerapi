@@ -29,7 +29,7 @@ jobs:
         run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages"
         
       - name: Deploy Package common.api
-        run: dotnet nuget push "common.sismo\common.sismo\bin\Release\common.sismo.1.0.0.nupkg"  --api-key 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 --source "github" 
+        run: dotnet nuget push "packages\common.sismo.1.0.0.nupkg"  --api-key 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 --source "github" 
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
