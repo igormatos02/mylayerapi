@@ -28,7 +28,7 @@ jobs:
       - name: Pack
         run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages"
       - name: Publish Pack
-        run: dotnet nuget push --source https://nuget.pkg.github.com/igormatos02/mylayerapi --api-key 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 'D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.0-action-testing.nupkg'
+        run: dotnet nuget push --source https://nuget.pkg.github.com/igormatos02/index.json --api-key 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 'D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.0-action-testing.nupkg'
 
       - name: dotnet publish
         run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp
