@@ -29,7 +29,7 @@ jobs:
       - name: Build with dotnet
         run: dotnet build --configuration Release
       - name: Pack
-        run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release /p:PackageVersion=9.9.9-beta -o "./packages" 
+        run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release /p:PackageVersion=${{ steps.gitversion.outputs.commitDate }} -o "./packages" 
       - name: Push generated package to GitHub registry
         run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.1.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
 
