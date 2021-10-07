@@ -1,6 +1,7 @@
 ﻿using common.sismo.interfaces.services;
 using common.sismo.models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
@@ -18,9 +19,31 @@ namespace api.mylayers.Controllers
         }
 
         [HttpGet]
+        [Route("Get")]
         public async Task<SurveyModel> Get(int id)
         {
             return await _surveyService.GetSurvey(id);
+        }
+
+        [HttpGet]
+        [Route("List")]
+        public async Task<List<SurveyModel>> List(bool activeOnly)
+        {
+            return await _surveyService.ListSurveys(activeOnly);
+        }
+
+        [HttpGet]
+        [Route("ListFromProject")]
+        public async Task<List<SurveyModel>> ListFromProject(int projectId)
+        {
+            return await _surveyService.ListSurveys(projectId);
+        }
+
+        [HttpPut]
+        [Route("UpdateStatus")]
+        public async Task UpdateSurveyStatus(int surveyId, bool isActive)
+        {
+              await _surveyService.UpdateSurveyStatus(surveyId, isActive);
         }
     }
 }

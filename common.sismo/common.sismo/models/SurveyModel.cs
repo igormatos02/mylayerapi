@@ -43,7 +43,7 @@ namespace common.sismo.models
         public int CountryId { get; set; }
         public int StateId { get; set; }
         public DateTime LastUpdate { get; set; }
-
+       
         public int ProfileId { get; set; }
         public decimal DistanceBetweenHoles { get; set; }
         public String SRSName { get; set; }
