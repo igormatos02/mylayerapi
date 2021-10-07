@@ -1816,7 +1816,7 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "common.sismo/1.0.1": {
+      "common.sismo/1.0.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -1838,7 +1838,7 @@
           "Esri.ArcGISRuntime.Toolkit": "100.11.0",
           "Esri.ArcGISRuntime.WPF": "100.11.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",
-          "common.sismo": "1.0.1"
+          "common.sismo": "1.0.2"
         },
         "compile": {
           "bin/placeholder/data.sismo.dll": {}
@@ -1851,7 +1851,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "common.sismo": "1.0.1"
+          "common.sismo": "1.0.2"
         },
         "compile": {
           "bin/placeholder/services.sismo.dll": {}
@@ -6712,7 +6712,7 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "common.sismo/1.0.1": {
+    "common.sismo/1.0.2": {
       "type": "project",
       "path": "../../common.sismo/common.sismo/common.sismo.csproj",
       "msbuildProject": "../../common.sismo/common.sismo/common.sismo.csproj"
@@ -6731,7 +6731,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Swashbuckle.AspNetCore >= 6.2.2",
-      "common.sismo >= 1.0.1",
+      "common.sismo >= 1.0.2",
       "data.sismo >= 1.0.0",
       "services.sismo >= 1.0.0"
     ]
