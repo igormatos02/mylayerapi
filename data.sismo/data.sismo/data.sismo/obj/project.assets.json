@@ -1783,7 +1783,7 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "common.sismo/1.0.0": {
+      "common.sismo/1.0.1": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
@@ -6589,7 +6589,7 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "common.sismo/1.0.0": {
+    "common.sismo/1.0.1": {
       "type": "project",
       "path": "../../../common.sismo/common.sismo/common.sismo.csproj",
       "msbuildProject": "../../../common.sismo/common.sismo/common.sismo.csproj"
@@ -6603,7 +6603,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
-      "common.sismo >= 1.0.0"
+      "common.sismo >= 1.0.1"
     ]
   },
   "packageFolders": {
