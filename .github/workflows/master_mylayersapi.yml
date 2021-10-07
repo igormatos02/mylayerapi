@@ -47,7 +47,8 @@ jobs:
       - name: Push generated package to GitHub registry client.mylayersapi
         run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\client.mylayersapi.${{ env.VERSION_NUMBER }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
 
-        
+      - name: dotnet publish
+        run: dotnet publish --self-contained true -r win-x86 -c Release -o ${{env.DOTNET_ROOT}}/myapp   
       
     
       - name: Upload artifact for deployment job
