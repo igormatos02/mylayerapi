@@ -24,9 +24,7 @@ jobs:
       - name: 'Get Version'
         id: version
         uses: battila7/get-version-action@v2
-           
-      - run: echo ${{ steps.get_version.outputs.version }}
-    
+     
       - name: Build with dotnet
         run: dotnet build --configuration Release
       - name: Pack
