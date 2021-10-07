@@ -33,19 +33,23 @@ jobs:
         uses: battila7/get-version-action@v2
       - name: Pack common.sismo
         run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --include-symbols --configuration Release -p:PackageVersion=${{ env.VERSION_NUMBER  }} -o "./packages" 
-      - name: Push generated package to GitHub registry common.sismo
-        run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.${{ env.VERSION_NUMBER }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
-
       - name: Pack clientlib.mylayers
         run: dotnet pack clientlib.mylayers\clientlib.mylayers.csproj  --configuration Release -p:PackageVersion=${{ env.VERSION_NUMBER  }} -o "./packages" 
+      - name: Pack client.mylayersapi
+        run: dotnet pack client.mylayersapi\client.mylayersapi.csproj  --configuration Release -p:PackageVersion=${{ env.VERSION_NUMBER  }} -o "./packages" 
+     
       - name: Push generated package to GitHub registry clientlib.mylayers
         run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\clientlib.mylayers.${{ env.VERSION_NUMBER }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
 
-      - name: Pack client.mylayersapi
-        run: dotnet pack client.mylayersapi\client.mylayersapi.csproj  --configuration Release -p:PackageVersion=${{ env.VERSION_NUMBER  }} -o "./packages" 
+      - name: Push generated package to GitHub registry common.sismo
+        run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.${{ env.VERSION_NUMBER }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
+      
       - name: Push generated package to GitHub registry client.mylayersapi
         run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\client.mylayersapi.${{ env.VERSION_NUMBER }}.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
 
+        
+      
+    
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
