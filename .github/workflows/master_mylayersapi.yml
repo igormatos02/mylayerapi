@@ -25,10 +25,12 @@ jobs:
         id: version
         uses: battila7/get-version-action@v2
            
+      - run: echo ${{ steps.get_version.outputs.version }}
+    
       - name: Build with dotnet
         run: dotnet build --configuration Release
       - name: Pack
-        run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release -p:PackageVersion=${{ steps.version.outputs.version-without-v }} -o "./packages" 
+        run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release -p:PackageVersion=${{ steps.get_version.outputs.version }} -o "./packages" 
       - name: Push generated package to GitHub registry
         run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.1.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
 
