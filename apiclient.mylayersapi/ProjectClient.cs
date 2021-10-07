@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace client.mylayersapi
+namespace apiclient.mylayersapi
 {
     public class ProjectClient : GenericClient
     {

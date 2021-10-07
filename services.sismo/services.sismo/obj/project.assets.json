@@ -1551,7 +1551,7 @@
   },
   "libraries": {
     "Microsoft.CSharp/4.5.0": {
-      "sha512": "EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
       "path": "microsoft.csharp/4.5.0",
       "files": [
@@ -2716,7 +2716,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "+zDE7ZbWRyYKI9Ai34xn3oYsgZLq3FcEO85uiYaD38mc9KIiFd01a6UB+Mxj5IgXXbFK8i9rgRLtcpUoUMfzRA==",
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -4836,7 +4836,7 @@
       ]
     },
     "System.Security.Cryptography.Cng/4.5.0": {
-      "sha512": "O4tqXxWCD8y1IU1VTgzbuBFwoRahrADhDUxHjwezhHCsqyFNyQ5EytjWBxu0EsZuH14b4UO2pFkG063K2h/9Ug==",
+      "sha512": "WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
       "type": "package",
       "path": "system.security.cryptography.cng/4.5.0",
       "files": [
