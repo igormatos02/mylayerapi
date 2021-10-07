@@ -22,10 +22,21 @@ jobs:
           dotnet-version: '3.1'
           include-prerelease: true
 
+      - name: Install GitVersion
+        uses: gittools/actions/gitversion/setup@v0.9
+        with:
+          versionSpec: '5.1.x'
+      - name: Use GitVersion
+        id: gitversion # step id used as reference for output values
+        uses: gittools/actions/gitversion/execute@v0.9
+      - run: |
+            echo "NuGetVersionV2: ${{ steps.gitversion.outputs.nuGetVersionV2 }}"
+            echo "NuGetPreReleaseTagV2: ${{ steps.gitversion.outputs.CommitsSinceVersionSourcePadded }}"
+
       - name: Build with dotnet
         run: dotnet build --configuration Release
       - name: Pack
-        run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages"
+        run: dotnet pack common.sismo\common.sismo\common.sismo.csproj --configuration Release --version-suffix action-testing -o "./packages" -p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }}-${{ steps.gitversion.outputs.CommitsSinceVersionSourcePadded }}
       - name: Push generated package to GitHub registry
         run: dotnet nuget push D:\a\mylayerapi\mylayerapi\packages\common.sismo.1.0.1.nupkg  --api-key ${{ secrets.GITHUB_TOKEN  }} --source https://nuget.pkg.github.com/igormatos02/index.json 
 
