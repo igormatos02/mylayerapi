@@ -12,7 +12,11 @@ namespace data.sismo.mapping
         public static ProjectBaseModel ToModel(this ProjectBase entity)
         {
 
-            return new ProjectBaseModel(); ;
+            return new ProjectBaseModel()
+            {
+                BaseId = entity.BaseId,
+                BaseName = entity.BaseName
+            };
 
         }
     }

@@ -10,21 +10,23 @@ namespace data.sismo.mapping
 {
     public static class SurveyMapping
     {
-        public static SurveyModel ToFullModel(this Survey entity)
+        public static SurveyModel ToFullModel(this Survey entity,MyLayerContext context )
         {
             if (entity == null) return null;
 
             var model = ToSimplifiedModel(entity);
-
-            //model.Project = entity.Project.ToModel();
-            //OperationalFronts = entity.SurveyOperationalFronts.Select(x => x.ToModel()),
-            //ProjectBases = entity.SurveyProjectBases.Select(x => x.ToModel()),
+            var bases = context.SurveyProjectBases.Where(x=>x.SurveyId==entity.SurveyId).Select(x => x.ProjectBase);
+            var frondIds = context.SurveyOperationalFronts.Where(x=>x.SurveyId==entity.SurveyId).Select(x => x.OperationalFrontId).ToList();
+            var fronts = context.SurveyOperationalFronts.Where(x => x.SurveyId == entity.SurveyId).Select(x => x.OperationalFront);
+            var project = context.Projects.Where(x => x.ProjectId == entity.ProjectId).FirstOrDefault();
+            model.Project = project.ToModel();
+            model.OperationalFronts = fronts.Select(x => x.ToModel()).ToList();
+            model.ProjectBases = bases.Select(x => x.ToModel()).ToList(); 
             model.PolygonColor = entity.PolygonColor;
             model.LastUpdate = entity.LastUpdate;
-            // OperationalFrontsIds.AddRange(entity.SurveyOperationalFronts.Select(x => x.OperationalFrontId).ToList()),
-            //ProjectBasesIds.AddRange(entity.SurveyProjectBases.Select(x => x.ProjectBaseId)),
+            model.OperationalFrontsIds.AddRange(frondIds);
             //CountryId = entity.Project.CountryId;
-            //StateId = entity.Project.StateId;
+            //model.StateId = entity.Project.StateId;
             return model;
           
         }
