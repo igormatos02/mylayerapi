@@ -19,21 +19,21 @@ namespace api.mylayers.Controllers
         }
 
         [HttpGet]
-        [Route("Get")]
+        [Route("Get/{id}")]
         public async Task<SurveyModel> Get(int id)
         {
             return await _surveyService.GetSurvey(id);
         }
 
         [HttpGet]
-        [Route("List")]
+        [Route("List/{activeOnly}")]
         public async Task<List<SurveyModel>> List(bool activeOnly)
         {
             return await _surveyService.ListSurveys(activeOnly);
         }
 
         [HttpGet]
-        [Route("ListFromProject")]
+        [Route("ListFromProject/{projectId}")]
         public async Task<List<SurveyModel>> ListFromProject(int projectId)
         {
             return await _surveyService.ListSurveys(projectId);
@@ -41,9 +41,9 @@ namespace api.mylayers.Controllers
 
         [HttpPut]
         [Route("UpdateStatus")]
-        public async Task UpdateSurveyStatus(int surveyId, bool isActive)
+        public async Task UpdateSurveyStatus(SurveyModel model)
         {
-              await _surveyService.UpdateSurveyStatus(surveyId, isActive);
+              await _surveyService.UpdateSurveyStatus(model.SurveyId, model.IsActive);
         }
     }
 }
