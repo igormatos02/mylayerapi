@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-    VERSION_NUMBER: '1.0.16'
+    VERSION_NUMBER: '1.0.17'
 jobs:
   build:
     runs-on: windows-latest
