@@ -18,7 +18,7 @@ namespace apiclient.mylayersapi
 
         public async Task<ClientResponse<SurveyModel>> Get(int surveyId)
         {
-            return await Get<SurveyModel>("Survey/Get/"+surveyId.ToString());
+            return await Get<SurveyModel>("Survey/Get?id="+surveyId.ToString());
         }
 
         public async Task<ClientResponse<List<SurveyModel>>> List()
@@ -33,7 +33,7 @@ namespace apiclient.mylayersapi
 
         public async Task<ClientResponse<List<SurveyModel>>> ListFromProject(int projectId)
         {
-            return await Get<List<SurveyModel>>("Survey/ListFromProject/" + projectId.ToString());
+            return await Get<List<SurveyModel>>("Survey/ListFromProject?projectId=" + projectId.ToString());
         }
 
         public async Task<ClientResponse<SurveyModel>> UpdateSurveyStatus(SurveyModel model)
