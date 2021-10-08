@@ -26,6 +26,11 @@ namespace apiclient.mylayersapi
             return await Get<List<SurveyModel>>("Survey/List");
         }
 
+        public async Task<ClientResponse<List<SurveyModel>>> ListActives()
+        {
+            return await Get<List<SurveyModel>>("Survey/ListActives");
+        }
+
         public async Task<ClientResponse<List<SurveyModel>>> ListFromProject(int projectId)
         {
             return await Get<List<SurveyModel>>("Survey/ListFromProject/" + projectId.ToString());

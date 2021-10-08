@@ -19,21 +19,28 @@ namespace api.mylayers.Controllers
         }
 
         [HttpGet]
-        [Route("Get")]
+        [Route("Get/{id}")]
         public async Task<SurveyModel> Get(int id)
         {
             return await _surveyService.GetSurvey(id);
         }
 
         [HttpGet]
-        [Route("List")]
-        public async Task<List<SurveyModel>> List(bool activeOnly)
+        [Route("ListActives")]
+        public async Task<List<SurveyModel>> ListActives()
         {
-            return await _surveyService.ListSurveys(activeOnly);
+            return await _surveyService.ListSurveys(true);
         }
 
         [HttpGet]
-        [Route("ListFromProject")]
+        [Route("List")]
+        public async Task<List<SurveyModel>> List()
+        {
+            return await _surveyService.ListSurveys(false);
+        }
+
+        [HttpGet]
+        [Route("ListFromProject/{projectId}")]
         public async Task<List<SurveyModel>> ListFromProject(int projectId)
         {
             return await _surveyService.ListSurveys(projectId);
