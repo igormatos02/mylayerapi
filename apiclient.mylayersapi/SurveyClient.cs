@@ -1,5 +1,6 @@
 ﻿using clientlib.mylayers;
 using common.sismo.models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -30,10 +31,10 @@ namespace apiclient.mylayersapi
             return await Get<List<SurveyModel>>("Project/ListFromProject");
         }
 
-        //public async Task  ListFromProject(int surveyId, bool isActive)
-        //{
-        //    var payload = Json
-        //    return await Put<SurveyModel>("Project/UpdateSurveyStatus",payload);
-        //}
+        public async Task<ClientResponse<SurveyModel>> UpdateSurveyStatus(SurveyModel model)
+        {
+            var payload = JsonConvert.SerializeObject(model);
+            return await Put<SurveyModel>("Project/UpdateSurveyStatus", payload);
+        }
     }
 }

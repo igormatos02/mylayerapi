@@ -7,7 +7,7 @@ namespace common.sismo.models
     {
         public SurveyModel()
         {
-            SurveyId = 0;
+            
             Project = new SeismicProjectModel();
             Parameters = new List<ParameterModel>();
             OperationalFrontsIds = new List<int>();
