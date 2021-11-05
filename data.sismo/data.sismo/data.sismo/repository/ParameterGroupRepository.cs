@@ -1,4 +1,5 @@
-﻿using common.sismo.models;
+﻿using common.sismo.interfaces.repositories;
+using common.sismo.models;
 using data.sismo.mapping;
 using data.sismo.models;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace data.sismo.repository
 {
-    public class ParameterGroupRepository
+    public class ParameterGroupRepository : IParameterGroupRepository
     {
         private readonly IDbContextFactory<MyLayerContext> _contextFactory;
         public ParameterGroupRepository(IDbContextFactory<MyLayerContext> contextFactory)
@@ -18,14 +19,14 @@ namespace data.sismo.repository
             _contextFactory = contextFactory;
 
         }
-        public async Task<ParameterGroupModel> GetParameter(int ParameterGroupId)
+        public async Task<ParameterGroupModel> GetParameterGroup(int ParameterGroupId)
         {
             using var context = _contextFactory.CreateDbContext();
             var query = await context.ParameterGroups.Where(m => m.ParameterGroupId == ParameterGroupId).FirstOrDefaultAsync();
             return query.ToModel();
         }
 
-        public async Task<List<ParameterGroupModel>> ListParameters()
+        public async Task<List<ParameterGroupModel>> ListParameterGroups()
         {
             using var context = _contextFactory.CreateDbContext();
             var query = (from x in context.ParameterGroups

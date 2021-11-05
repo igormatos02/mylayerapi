@@ -12,7 +12,7 @@ namespace common.sismo.interfaces.repositories
         Task<PreplotPointModel> GetPreplotPoint(int surveyId, PreplotPointType pointType, int preplotVersionId,
          int preplotPointId);
 
-
+        Task<PreplotPointType> GetPreplotPointTypeByOpFrontType(OperationalFrontType operationalFront);
         Task<Boolean> ArePointsConnected(int surveyId, string lineNumber,
             decimal stationNumber1, decimal stationNumber2, PreplotPointType consideringPointsType);
 

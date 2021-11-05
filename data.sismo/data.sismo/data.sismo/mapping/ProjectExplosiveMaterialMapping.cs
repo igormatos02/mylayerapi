@@ -23,8 +23,6 @@ namespace data.sismo.mapping
         {
 
 
-
-
             //entity.ProjectId = model.ProjectId;
             //entity.SurveyId = model.SurveyId;
 

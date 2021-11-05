@@ -707,5 +707,10 @@ namespace data.sismo.repository
            
 
         }
+
+        public Task<PreplotPointType> GetPreplotPointTypeByOpFrontType(OperationalFrontType operationalFront)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

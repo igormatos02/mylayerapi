@@ -1,5 +1,6 @@
 ﻿using common.sismo.enums;
 using NetTopologySuite.Geometries;
+using System.Collections.Generic;
 
 namespace common.sismo.models
 {
@@ -22,5 +23,23 @@ namespace common.sismo.models
         public PreplotPointType PreplotPointType { get; set; }
         public string TypeName { get; set; }
         public int? LandId { get; set; }
+    }
+
+    public class VersionAndTypesModel
+    {
+        public List<PreplotVersionModel> Versions { get; set; }
+        public List<VersionTypeModel> PreplotPointTypes { get; set; }
+    }
+    public class VersionTypeModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+    public class PreplotPointListWithSrs
+    {
+        public List<PreplotAndPosplotDataModel> Points { get; set; }
+        public string SrsName { get; set; }
+        public string Coordinates { get; set; }
+        public long Count { get; set; }
     }
 }

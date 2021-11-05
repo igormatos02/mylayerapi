@@ -1,4 +1,5 @@
-﻿using common.sismo.models;
+﻿using common.sismo.interfaces.repositories;
+using common.sismo.models;
 using data.sismo.mapping;
 using data.sismo.models;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace data.sismo.repository
 {
-    public class ParameterRepository
+    public class ParameterRepository : IParameterRepository
     {
         private readonly IDbContextFactory<MyLayerContext> _contextFactory;
         public ParameterRepository(IDbContextFactory<MyLayerContext> contextFactory)
