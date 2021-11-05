@@ -59,4 +59,12 @@ namespace common.sismo.models
         public Serie MediaKm { get; set; }
         public int LastAvgX { get; set; }
     }
+
+    public class DecimalChartSerie
+    {
+        public String name { get; set; }
+        public decimal[] data { get; set; }
+
+        public String type { get; set; }
+    }
 }
