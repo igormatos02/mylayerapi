@@ -1,114 +1,112 @@
-﻿//using common.sismo.interfaces.repositories;
-//using common.sismo.models;
-//using data.sismo.mapping;
-//using data.sismo.models;
-//using Microsoft.EntityFrameworkCore;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Threading.Tasks;
+﻿using common.sismo.enums;
+using common.sismo.interfaces.repositories;
+using common.sismo.models;
+using data.sismo.mapping;
+using data.sismo.models;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-//namespace data.sismo.repository
-//{
-//    public class HoleRepository
-//    {
+namespace data.sismo.repository
+{
+    public class HoleRepository : IHoleRepository   
+    {
 
-//        private readonly IDbContextFactory<MyLayerContext> _contextFactory;
-//        public DisplacementRuleRepository(IDbContextFactory<MyLayerContext> contextFactory)
-//        {
-//            _contextFactory = contextFactory;
-//        }
-       
+        private readonly IDbContextFactory<MyLayerContext> _contextFactory;
+        public HoleRepository(IDbContextFactory<MyLayerContext> contextFactory)
+        {
+            _contextFactory = contextFactory;
+        }
 
-//        public void BeginTransaction()
-//        {
-//            DbContextTransaction = DatabaseContext.Database.BeginTransaction();
-//        }
+        public async Task<HoleModel> GetHole(int surveyId, int preplotPointId, int preplotVersionId,
+             PreplotPointType preplotPointType, int workNumber, int operationalFrontId, int holeNumber)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            var entity = await GetHoleEntity(surveyId, preplotPointId, preplotVersionId,
+                    preplotPointType, workNumber, operationalFrontId, holeNumber);
+            return entity.ToModel();
+        }
 
-//        public void RollbackTransaction()
-//        {
-//            DbContextTransaction.Rollback();
-//        }
+        private async Task<Hole> GetHoleEntity(int surveyId, int preplotPointId, int preplotVersionId,
+            PreplotPointType preplotPointType, int workNumber, int operationalFrontId, int holeNumber)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            var entity = await context.Holes.FirstOrDefaultAsync(m => m.SurveyId == surveyId && m.PreplotPointId == preplotPointId &&
+                                  m.PreplotVersionId == preplotVersionId &&
+                                  m.PreplotPointType == (int)preplotPointType &&
+                                  m.WorkNumber == workNumber && m.OperationalFrontId == operationalFrontId &&
+                                  m.HoleNumber == holeNumber);
+            return entity;
+        }
 
-//        public void CommitTransaction()
-//        {
-//            DbContextTransaction.Commit();
-//        }
+        /// <summary>
+        /// List the holes of a preplot point
+        /// </summary>
+        /// <param name="surveyId"></param>
+        /// <param name="preplotPointId"></param>
+        /// <param name="preplotVersionId"></param>
+        /// <param name="preplotPointType"></param>
+        /// <param name="operationalFrontId"></param>
+        /// <returns></returns>
+        public async Task<List<HoleModel>> ListHoles(int surveyId, int preplotPointId, int preplotVersionId,
+            PreplotPointType preplotPointType, int operationalFrontId)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            var entities = await context.Holes.Where(m => m.SurveyId == surveyId && m.PreplotPointId == preplotPointId &&
+                                            m.PreplotVersionId == preplotVersionId &&
+                                            m.PreplotPointType == (int)preplotPointType &&
+                                            m.OperationalFrontId == operationalFrontId).ToListAsync();
+            return entities.Select(x => x.ToModel()).ToList();
+        }
 
-      
+        public async Task DeleteHoles(PointProductionModel production)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            var holes = await context.Holes.Where(m => m.SurveyId == production.SurveyId && m.PreplotPointId == production.PreplotPointId &&
+                                            m.PreplotVersionId == production.PreplotVersionId &&
+                                            m.PreplotPointType == (int)production.PreplotPointType &&
+                                            m.OperationalFrontId == production.OperationalFrontId).ToListAsync();
 
-//        public HoleDTO GetHole(int surveyId, int preplotPointId, int preplotVersionId,
-//             PreplotPointType preplotPointType, int workNumber, int operationalFrontId, int holeNumber)
-//        {
-//            return HoleParser.StGetInstance()
-//                .CreateDto(GetHoleEntity(surveyId, preplotPointId, preplotVersionId,
-//                    preplotPointType, workNumber, operationalFrontId, holeNumber)) as HoleDTO;
-//        }
+            var filteredHoles = holes.Where(holeEntity => holeEntity != null);
+            await DeleteHoles(filteredHoles.Select(x=>x.ToModel()));
+        }
 
-//        private Hole GetHoleEntity(int surveyId, int preplotPointId, int preplotVersionId,
-//            PreplotPointType preplotPointType, int workNumber, int operationalFrontId, int holeNumber)
-//        {
-//            return GetSingle(m => m.SurveyId == surveyId && m.PreplotPointId == preplotPointId &&
-//                                  m.PreplotVersionId == preplotVersionId &&
-//                                  m.PreplotPointType == (int)preplotPointType &&
-//                                  m.WorkNumber == workNumber && m.OperationalFrontId == operationalFrontId &&
-//                                  m.HoleNumber == holeNumber);
-//        }
+        public async Task DeleteHoles(IEnumerable<HoleModel> holes)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            foreach (var hole in holes) {
+                var holeEntity = await GetHoleEntity(hole.SurveyId,hole.PreplotPointId,hole.PreplotVersionId,hole.PreplotPointType,hole.WorkNumber,hole.OperationalFrontId,hole.HoleNumber);
+                context.Holes.Remove(holeEntity);
+            }
+            await context.SaveChangesAsync();
 
-//        /// <summary>
-//        /// List the holes of a preplot point
-//        /// </summary>
-//        /// <param name="surveyId"></param>
-//        /// <param name="preplotPointId"></param>
-//        /// <param name="preplotVersionId"></param>
-//        /// <param name="preplotPointType"></param>
-//        /// <param name="operationalFrontId"></param>
-//        /// <returns></returns>
-//        public IEnumerable<HoleDTO> ListHoles(int surveyId, int preplotPointId, int preplotVersionId,
-//            PreplotPointType preplotPointType, int operationalFrontId)
-//        {
-//            return HoleParser.StGetInstance()
-//                .CreateDtoList(GetAll(m => m.SurveyId == surveyId && m.PreplotPointId == preplotPointId &&
-//                                           m.PreplotVersionId == preplotVersionId &&
-//                                           m.PreplotPointType == (int)preplotPointType &&
-//                                           m.OperationalFrontId == operationalFrontId)).Cast<HoleDTO>();
-//        }
+        }
 
-//        public void DeleteHoles(PointProductionDTO production)
-//        {
-//            var holes = ListHoles(production.SurveyId, production.PreplotPointId, production.PreplotVersionId,
-//                production.PreplotPointType, production.OperationalFrontId);
-//            DeleteHoles(holes);
-//        }
+        public async Task AddHoles(IEnumerable<HoleModel> holes)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            foreach (var holeModel in holes)
+            {
+                context.Holes.Add(holeModel.ToEntity());
+                await context.SaveChangesAsync();
+            }
+        }
 
-//        public void DeleteHoles(IEnumerable<HoleDTO> holes)
-//        {
-//            foreach (var holeEntity in holes.Select(holeDto => GetHoleEntity(holeDto.SurveyId, holeDto.PreplotPointId, holeDto.PreplotVersionId, holeDto.PreplotPointType,
-//                holeDto.WorkNumber, holeDto.OperationalFrontId, holeDto.HoleNumber)).Where(holeEntity => holeEntity != null))
-//            {
-//                Delete(holeEntity);
-//            }
-//        }
-
-//        public void AddHoles(IEnumerable<HoleDTO> holes)
-//        {
-//            foreach (var holeDto in holes)
-//            {
-//                Add(HoleParser.StGetInstance().CreateEntity(holeDto));
-//            }
-//        }
-
-//        public void UpdateHoles(IEnumerable<HoleDTO> holes)
-//        {
-//            foreach (var holeDto in holes)
-//            {
-//                var holeEntity = GetHoleEntity(holeDto.SurveyId, holeDto.PreplotPointId, holeDto.PreplotVersionId, holeDto.PreplotPointType,
-//                    holeDto.WorkNumber, holeDto.OperationalFrontId, holeDto.HoleNumber);
-//                if (holeEntity != null)
-//                {
-//                    HoleParser.StGetInstance().CreateEntity(holeDto, holeEntity);
-//                    SaveChanges();
-//                }
-//            }
-//        }
-//    }
-//}
+        public async Task UpdateHoles(IEnumerable<HoleModel> holes)
+        {
+            using var context = _contextFactory.CreateDbContext();
+            foreach (var holeModel in holes)
+            {
+                var holeEntity = await GetHoleEntity(holeModel.SurveyId, holeModel.PreplotPointId, holeModel.PreplotVersionId, holeModel.PreplotPointType,
+                    holeModel.WorkNumber, holeModel.OperationalFrontId, holeModel.HoleNumber);
+                if (holeEntity != null)
+                {
+                    holeModel.Copy(holeEntity);
+                    await context.SaveChangesAsync();
+                   
+                }
+            }
+        }
+    }
+}

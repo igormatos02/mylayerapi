@@ -1,4 +1,5 @@
 ﻿
+using common.sismo.enums;
 using common.sismo.models;
 using data.sismo.models;
 
@@ -17,6 +18,9 @@ namespace data.sismo.mapping
 
         }
 
+    
+
+
         public static void Copy(this HoleModel model, Hole entity)
         {
 
@@ -27,6 +31,9 @@ namespace data.sismo.mapping
             //entity.SurveyId = model.SurveyId;
 
         }
+
+     
+
         public static Hole ToEntity(this HoleModel model)
         {
             Hole entity = new Hole();
