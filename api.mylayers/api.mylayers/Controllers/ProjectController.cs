@@ -10,8 +10,8 @@ namespace api.mylayers.Controllers
     [Route("[controller]")]
     public class ProjectController : ControllerBase
     {
-       
-        private readonly IProjectService _projectService; 
+
+        private readonly IProjectService _projectService;
         public ProjectController(IProjectService projectService)
         {
             _projectService = projectService;
